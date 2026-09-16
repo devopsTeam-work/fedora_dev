@@ -25,8 +25,7 @@ LABEL name="fedora38" \
 	  BenchmarkVersion="$BENCHMARK_VERSION"
 
 # ADD https://netfree.link/dl/unix-ca.sh /home/netfree-unix-ca.sh 
-RUN (curl -k https://files.devops.elta.co.il/scripts/addEltaCert.sh | sh) || true && \
-    curl  https://netfree.link/dl/unix-ca.sh | sh && \
+RUN curl  https://netfree.link/dl/unix-ca.sh | sh && \
 	update-ca-trust
 
 
